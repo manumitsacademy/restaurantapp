@@ -33,7 +33,7 @@ function Restaurant(props) {
                 </h2>
               </div>
               <div class="card-body">
-                <h2>{table.status === "FREE" ? "FREE" : "Occupied"}</h2>
+                <h4>Status:{table.status === "FREE" ? "FREE" : "Occupy"}</h4>
               </div>
               <div class="card-footer">
                 <button
@@ -41,7 +41,7 @@ function Restaurant(props) {
                     toggleStatus(i);
                   }}
                 >
-                  change
+                  Make it {table.status !== "FREE" ? "FREE" : "Occupied"}
                 </button>
               </div>
             </div>
