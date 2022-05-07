@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { tablesmock } from "./tables.mock";
+import { items } from "./items.mock";
 import "./App.css";
-import { tab } from "@testing-library/user-event/dist/tab";
 function Restaurant(props) {
   const [tables, settables] = useState(tablesmock);
+  const [bills, setbills] = useState();
   function toggleStatus(index) {
     var temp = [...tables];
     temp[index].status = temp[index].status === "FREE" ? "OCCUPIED" : "FREE";
@@ -19,7 +20,7 @@ function Restaurant(props) {
               className={
                 table.status === "FREE"
                   ? "card m-3 bg-success"
-                  : "card m-3 bg-info"
+                  : "card m-3 bg-secondary"
               }
             >
               <div class="card-header d-flex justify-content-between">
