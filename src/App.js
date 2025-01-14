@@ -4,7 +4,7 @@ import Restaurant from "./Restaurant";
 function App() {
   return (
     <div>
-      <h1>Polyfoods</h1>
+      <h1>Polyfoodies</h1>
       <Restaurant></Restaurant>
     </div>
   );
